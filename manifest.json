@@ -3,10 +3,12 @@
   "name": "Timebox Mini",
   "codeowners": ["@JosMtx"],
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/timebox",
+  "documentation": "https://github.com/JosMtx/hacs-timebox",
   "integration_type": "service",
   "iot_class": "local_push",
   "requirements": [
     "pillow==10.2.0"
-  ]
+  ],
+  "version": "0.1.0",
+  "issue_tracker": "https://github.com/JosMtx/hacs-timebox/issues"
 }
