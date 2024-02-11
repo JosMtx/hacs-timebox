@@ -1,0 +1,69 @@
+show_time:
+
+show_weather:
+
+show_image:
+  fields:
+    image:
+      required: true
+      example: home_assistant_black
+      default: home_assistant_black
+      selector:
+        select:
+          options:
+            - big_bell_black
+            - big_bell
+            - black
+            - green_check_black
+            - green_check
+            - home_assistant_black
+            - home_assistant
+            - home_black
+            - home
+            - hourglass_black
+            - hourglass_white
+            - locked_black
+            - locked
+            - orange_warning_black
+            - orange_warning
+            - red_cross_black
+            - red_cross
+            - small_bell_black
+            - small_bell
+            - spanner
+            - spanner_rev
+            - spanner_tilted
+            - spanner_tilted_rev
+            - unlocked_black
+            - unlocked
+            - wifi_no
+            - wifi
+            - wifi_no_black
+            - wifi_black
+      
+set_volume:
+  fields:
+    volume:
+      required: true
+      example: 8
+      default: 4
+      selector:
+        number:
+          min: 0
+          max: 16
+          step: 1
+          mode: slider
+
+set_brightness:
+  fields:
+    brightness:
+      required: false
+      example: 75
+      default: 50
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 5
+          mode: slider
+          unit_of_measurement: "%"

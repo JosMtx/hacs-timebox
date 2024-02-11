@@ -1,0 +1,12 @@
+{
+  "domain": "timebox",
+  "name": "Timebox Mini",
+  "codeowners": ["@JosMtx"],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/timebox",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "requirements": [
+    "pillow==10.2.0"
+  ]
+}

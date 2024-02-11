@@ -1,0 +1,66 @@
+{
+    "services": {
+        "show_time": {
+            "name": "Show time",
+            "description": "Display time"
+        },
+        "show_weather": {
+            "name": "Show weather",
+            "description": "Display weather image and temperature"
+        },
+        "show_image": {
+            "name": "Show image",
+            "description": "Display an image",
+            "fields": {
+                "image": {
+                    "name": "Image",
+                    "description": "Image to be displayed."
+                }
+            }
+        },
+        "set_volume": {
+            "name": "Set sound volume",
+            "description": "Set sound volume",
+            "fields": {
+                "volume": {
+                    "name": "Volume",
+                    "description": "Sound volume."
+                }
+            }
+        },
+        "set_brightness": {
+            "name": "Set display brightness",
+            "description": "Set display brightness",
+            "fields": {
+                "brightness": {
+                    "name": "Brightness",
+                    "description": "Display brightness."
+                }
+            }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "mac": "MAC address"
+                }
+            }
+        },
+        "error": {
+            "invalid_mac": "Invalid MAC address, format is 11:75:58:DD:F1:42",
+            "cannot_connect": "Connection failed, make sure Timebox is on"
+        },
+        "abort": {
+            "already_configured": "Device is already configured for this MAC"
+        }
+    },
+    "exceptions": {
+        "invalid_mac": {
+            "message": "Invalid MAC address, format is 11:75:58:DD:F1:42"
+        },
+        "cannot_connect": {
+            "message": "Connection failed, make sure Timebox is on"
+        }
+    }
+}

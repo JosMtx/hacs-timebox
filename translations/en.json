@@ -1,0 +1,66 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured for this MAC"
+        },
+        "error": {
+            "cannot_connect": "Connection failed, make sure Timebox is on",
+            "invalid_mac": "Invalid MAC address, format is 11:75:58:DD:F1:42"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "mac": "MAC address"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "cannot_connect": {
+            "message": "Connection failed, make sure Timebox is on"
+        },
+        "invalid_mac": {
+            "message": "Invalid MAC address, format is 11:75:58:DD:F1:42"
+        }
+    },
+    "services": {
+        "set_brightness": {
+            "description": "Set display brightness",
+            "fields": {
+                "brightness": {
+                    "description": "Display brightness.",
+                    "name": "Brightness"
+                }
+            },
+            "name": "Set display brightness"
+        },
+        "set_volume": {
+            "description": "Set sound volume",
+            "fields": {
+                "volume": {
+                    "description": "Sound volume.",
+                    "name": "Volume"
+                }
+            },
+            "name": "Set sound volume"
+        },
+        "show_image": {
+            "description": "Display an image",
+            "fields": {
+                "image": {
+                    "description": "Image to be displayed.",
+                    "name": "Image"
+                }
+            },
+            "name": "Show image"
+        },
+        "show_time": {
+            "description": "Display time",
+            "name": "Show time"
+        },
+        "show_weather": {
+            "description": "Display weather image and temperature",
+            "name": "Show weather"
+        }
+    }
+}
