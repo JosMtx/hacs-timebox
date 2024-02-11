@@ -1,11 +1,13 @@
 {
   "domain": "timebox",
   "name": "Timebox Mini",
-  "codeowners": ["@JosMtx"],
+  "codeowners": [
+    "@JosMtx"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/JosMtx/hacs-timebox",
   "integration_type": "service",
   "iot_class": "local_push",
-  "version": "0.1.0",
-  "issue_tracker": "https://github.com/JosMtx/hacs-timebox/issues"
+  "issue_tracker": "https://github.com/JosMtx/hacs-timebox/issues",
+  "version": "0.2.0"
 }

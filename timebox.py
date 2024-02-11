@@ -1,5 +1,5 @@
 import sys
-import bluetooth
+import socket
 from PIL import Image
 from itertools import product
 import logging
@@ -17,12 +17,17 @@ class Timebox:
         # open socket on channel 4
         if(self.debug):
             _LOGGER.info('Connecting to ' + self.mac + ' on channel 4')
-        self.sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        self.sock.connect((self.mac, 4))
-        # read HELLO
-        ret = self.sock.recv(256)
-        if(self.debug):
-            _LOGGER.info('<- ' + ''.join('{:02x} '.format(x) for x in ret))
+        self.sock = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
+        try:
+            self.sock.connect((self.mac, 4))
+            # read HELLO
+            ret = self.sock.recv(256)
+            if(self.debug):
+                _LOGGER.info('<- ' + ''.join('{:02x} '.format(x) for x in ret))
+        except Exception as e:
+            _LOGGER.error(e)
+            return False
+            
         return True
 
     def disconnect(self):
