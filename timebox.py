@@ -18,6 +18,7 @@ class Timebox:
         if(self.debug):
             _LOGGER.info('Connecting to ' + self.mac + ' on channel 4')
         self.sock = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
+        self.sock.settimeout(10)
         try:
             self.sock.connect((self.mac, 4))
             # read HELLO
